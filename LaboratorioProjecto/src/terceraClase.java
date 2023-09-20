@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.*;
 
 public class terceraClase {
@@ -365,6 +366,55 @@ public class terceraClase {
             }
         }
 
+
+        System.out.println("EJERCICIO 27:");
+        int A, B;
+        System.out.print("Ingrese el primer numero: ");
+        A = sc.nextInt();
+        System.out.print("Ingrese el segundo numero: ");
+        B = sc.nextInt();
+        if (A < B){
+
+            for (iterador = A; iterador <= B; iterador++){
+                if (iterador % 2 == 0){
+                    System.out.println(iterador + " es un numero PAR");
+                }
+            }
+        } else {
+            System.out.println("EL primer numero no puede ser mayor al segundo!!");
+        }
+
+
+        System.out.println("EJERCICIO 28:");
+        int N1, M1;
+        System.out.print("Ingrese el numero, que desea saber sus multiplos: ");
+        N1 = sc.nextInt();
+        System.out.print("Ingrese un numero grande par saber el limite de numero a imprimir: ");
+        M1 = sc.nextInt();
+        while (N1 > M1){
+            System.out.println("--");
+            System.out.println("LOS VALORES FUERON INCORRECTOS!!, el primer numero no debe ser mayor al segundo");
+            System.out.print("Ingrese el numero, que desea saber sus multiplos: ");
+            N1 = sc.nextInt();
+            System.out.print("Ingrese un numero grande par saber el limite de numero a imprimir: ");
+            M1 = sc.nextInt();
+        }
+        for (i = 1; i <= M1; i++){
+            if (i % N1 == 0){
+                System.out.println(i + " es multiplo de " + N1);
+            }
+        }
+
+        System.out.println("EJERCICIO 29:");
+        double millas;
+        do{
+            System.out.println("----");
+            System.out.print("Ingrese la cantidad de millas <<Ingrese 0 para salir>>: ");
+            millas = sc.nextDouble();
+            DecimalFormat df = new DecimalFormat("#.00");
+            System.out.println("EL equivalente de millas a Kilometros es = "+ df.format(millas * 1.6093) + "Km");
+        } while(millas != 0);
+        System.out.println("Ha salido del bucle!");
     }
 
 }
