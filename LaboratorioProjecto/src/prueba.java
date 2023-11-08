@@ -15,7 +15,7 @@ public class prueba {
         DecimalFormat df = new DecimalFormat("#.00");
 
 
-
+        System.out.println((int)1e-9);
     }
 
     // EJERCICIO 1:
